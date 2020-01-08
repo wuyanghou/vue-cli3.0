@@ -4,8 +4,10 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "serve-test": "vue-cli-service serve --mode test",
-    "build": "vue-cli-service build",
+    "serve-sat": "vue-cli-service serve --mode sat",
+    "build-prd": "vue-cli-service build --mode prd",
+    "build-uat": "vue-cli-service build --mode uat",
+    "build-pre": "vue-cli-service build --mode pre",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -51,14 +53,5 @@
   "browserslist": [
     "> 1%",
     "last 2 versions"
-  ],
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.{js,vue}": [
-      "vue-cli-service lint",
-      "git add"
-    ]
-  }
+  ]
 }
